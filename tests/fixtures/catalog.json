@@ -1,0 +1,108 @@
+{
+  "brands": [
+    {
+      "name": "Test Brand EUR",
+      "countryCode": "EU",
+      "currencyCode": "EUR",
+      "description": "Test Brand EUR is an organization dedicated o support clients in all spheres of their business. It is available all around the globe and has support in multiple African countries and also on the Moon.",
+      "disclaimer": null,
+      "redemptionInstructions": null,
+      "terms": null,
+      "logoUrl": "",
+      "modifiedDate": "2021-12-16T09:38:48.8831275",
+      "products": [
+        {
+          "id": 65886,
+          "name": "Out of Stock",
+          "minFaceValue": 10.0000,
+          "maxFaceValue": 10.0000,
+          "count": 0,
+          "price": {
+            "min": 48.98432000,
+            "max": 48.98432000,
+            "currencyCode": "EUR"
+          },
+          "modifiedDate": "2022-03-29T09:56:50.3941188"
+        }
+      ]
+    },
+    {
+      "name": "Controlled Test",
+      "countryCode": "EU",
+      "currencyCode": "EUR",
+      "description": null,
+      "disclaimer": null,
+      "redemptionInstructions": null,
+      "terms": null,
+      "logoUrl": "",
+      "modifiedDate": "2022-08-24T09:02:35.811598",
+      "products": [
+        {
+          "id": 65880,
+          "name": "Controlled Test Long Processing",
+          "minFaceValue": 10.0000,
+          "maxFaceValue": 10.0000,
+          "count": null,
+          "price": {
+            "min": 9.50000000,
+            "max": 9.50000000,
+            "currencyCode": "EUR"
+          },
+          "modifiedDate": "2021-12-22T16:01:53.6598108"
+        },
+        {
+          "id": 65881,
+          "name": "Controlled Test 1 Hour",
+          "minFaceValue": 1.0000,
+          "maxFaceValue": 1.0000,
+          "count": null,
+          "price": {
+            "min": 0.95000000,
+            "max": 0.95000000,
+            "currencyCode": "EUR"
+          },
+          "modifiedDate": "2022-02-16T15:38:55.5043698"
+        },
+        {
+          "id": 65887,
+          "name": "Controlled Failed Test",
+          "minFaceValue": 10.0000,
+          "maxFaceValue": 10.0000,
+          "count": null,
+          "price": {
+            "min": 30.0000,
+            "max": 30.0000,
+            "currencyCode": "EUR"
+          },
+          "modifiedDate": "2022-03-31T08:04:01.4987924"
+        }
+      ]
+    },
+    {
+      "name": "Lebara 4G Online 1GB",
+      "countryCode": "NL",
+      "currencyCode": "EUR",
+      "description": "",
+      "disclaimer": null,
+      "redemptionInstructions": null,
+      "terms": null,
+      "logoUrl": "https://bamboo-staging-assets.s3.amazonaws.com/app-images/brand-images/24317/logo",
+      "modifiedDate": "2022-06-22T12:03:27.7306184",
+      "products": [
+        {
+          "id": 65889,
+          "name": "Lebara 4G Online 1GB",
+          "minFaceValue": 15.0000,
+          "maxFaceValue": 15.0000,
+          "count": null,
+          "price": {
+            "min": 19.96995000,
+            "max": 19.96995000,
+            "currencyCode": "EUR"
+          },
+          "modifiedDate": "2022-06-22T12:03:16.7118747"
+        }
+      ]
+    }
+  ]
+}

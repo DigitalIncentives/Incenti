@@ -1,0 +1,29 @@
+{
+  "orderId": 66783,
+  "requestId": "97018cf7-98f5-40fc-a142-731d43a72e29",
+  "items": [
+    {
+      "brandCode": null,
+      "productId": 65889,
+      "productFaceValue": 15.0000,
+      "quantity": 1,
+      "pictureUrl": null,
+      "countryCode": "NL",
+      "currencyCode": "EUR",
+      "cards": [
+        {
+          "id": 706324,
+          "serialNumber": "987654321",
+          "cardCode": "123456789",
+          "pin": null,
+          "expirationDate": "2022-08-31T01:58:03",
+          "status": "Sold"
+        }
+      ]
+    }
+  ],
+  "status": "Succeeded",
+  "createdDate": "2022-08-30T23:58:02.0303279",
+  "total": 20.0039,
+  "errorMessage": null
+}
