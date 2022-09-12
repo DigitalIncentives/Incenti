@@ -31,6 +31,44 @@ class Brand extends AbstractEntity
         $this->name = $name;
     }
 
+    public function getCountryCodes(): array
+    {
+        if ($this->countryCode === 'EU') {
+            // Return array with all EU countries because Incenti uses EU as a country code.
+            return [
+                'AT',
+                'BE',
+                'BG',
+                'HR',
+                'CY',
+                'CZ',
+                'DK',
+                'EE',
+                'FI',
+                'FR',
+                'DE',
+                'GR',
+                'HU',
+                'IE',
+                'IT',
+                'LV',
+                'LT',
+                'LU',
+                'MT',
+                'NL',
+                'PL',
+                'PT',
+                'RO',
+                'SK',
+                'SI',
+                'ES',
+                'SE'
+            ];
+        }
+
+        return [$this->countryCode];
+    }
+
     /**
      * @return string
      */
@@ -68,7 +106,7 @@ class Brand extends AbstractEntity
      */
     public function getDescription(): string
     {
-        return $this->description;
+        return $this->description ?? '';
     }
 
     /**
@@ -100,7 +138,7 @@ class Brand extends AbstractEntity
      */
     public function getRedemptionInstructions(): string
     {
-        return $this->redemptionInstructions;
+        return $this->redemptionInstructions ?? '';
     }
 
     /**
@@ -116,7 +154,7 @@ class Brand extends AbstractEntity
      */
     public function getTerms(): string
     {
-        return $this->terms;
+        return $this->terms ?? '';
     }
 
     /**
