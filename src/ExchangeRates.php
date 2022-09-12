@@ -2,9 +2,14 @@
 
 namespace DigitalIncentives\Incenti;
 
+use Exception;
+
 class ExchangeRates extends AbstractEntity
 {
     protected string $baseCurrencyCode;
+    /**
+     * @var Rate[]
+     */
     protected array $rates;
 
     /**
@@ -24,7 +29,7 @@ class ExchangeRates extends AbstractEntity
     }
 
     /**
-     * @return array
+     * @return Rate[]
      */
     public function getRates(): array
     {
@@ -39,5 +44,54 @@ class ExchangeRates extends AbstractEntity
         $this->rates = array_map(function ($value) {
             return new Rate($value);
         }, $rates);
+    }
+
+    public function hasExchangeRate(string $currency)
+    {
+        foreach ($this->rates as $rate) {
+            if ($rate->getCurrencyCode() === $currency) {
+                return true;
+            }
+        }
+
+        return false;
+    }
+
+    /**
+     * Exchange value from default currency into provided currency.
+     *
+     * @param string $currency
+     * @param float $value
+     * @return float
+     * @throws Exception
+     */
+    public function exchangeToCurrency(string $currency, float $value): float
+    {
+        foreach ($this->rates as $rate) {
+            if ($rate->getCurrencyCode() === $currency) {
+                return $value * $rate->getValue();
+            }
+        }
+
+        throw new Exception('Currency Code ' . $currency . ' not found.');
+    }
+
+    /**
+     * Exchange value into default currency from provided currency.
+     *
+     * @param string $currency
+     * @param float $value
+     * @return float
+     * @throws Exception
+     */
+    public function exchangeFromCurrency(string $currency, float $value): float
+    {
+        foreach ($this->rates as $rate) {
+            if ($rate->getCurrencyCode() === $currency) {
+                return $value / $rate->getValue();
+            }
+        }
+
+        throw new Exception('Currency Code ' . $currency . ' not found.');
     }
 }
