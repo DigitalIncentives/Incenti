@@ -81,11 +81,11 @@ class Product extends AbstractEntity
         return $this->minFaceValue === $this->maxFaceValue;
     }
 
-    /**
-     * @return int
-     */
-    public function getCount(): int
+    public function getCount(): ?int
     {
+        if(!isset($this->count)) {
+            return null;
+        }
         return $this->count;
     }
 
